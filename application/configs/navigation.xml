@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <nav>
+        <home>
+            <label>Home</label>
+            <uri>/index/</uri>
+            <id>index</id>
+            <pages>
+                <directory>
+                    <label>Directory</label>
+                    <uri>/index/directory/</uri>
+                    <id>directory</id>
+                </directory>
+                <events>
+                    <label>Event List</label>
+                    <uri>/index/events/</uri>
+                    <id>events</id>
+                    <pages>
+                        <eventdetile>
+                            <label>Event Details</label>
+                            <uri>/index/eventdetile/</uri>
+                            <id>eventdetile</id>
+                            <resource>events</resource>
+                        </eventdetile>
+                    </pages>
+                </events>
+                <courses>
+                    <label>Courses</label>
+                    <uri>/index/courses/</uri>
+                    <id>courses</id>
+                    <class>before</class>
+                    <pages>
+                        <coursedetile>
+                            <label>Course Details</label>
+                            <uri>/index/coursedetile/</uri>
+                            <id>coursedetile</id>
+                            <resource>courses</resource>
+                        </coursedetile>
+                    </pages>
+                </courses>
+                <librarycatigories>
+                    <label>Library Categories</label>
+                    <uri>/index/librarycatigories/</uri>
+                    <id>librarycatigories</id>
+                    <pages>
+                        <librarylist>
+                            <label>Library</label>
+                            <uri>/index/librarylist/</uri>
+                            <id>librarylist</id>
+                            <resource>librarycatigories</resource>
+                        </librarylist>
+                    </pages>
+                </librarycatigories>
+                <videocatigories>
+                    <label>Video Categories</label>
+                    <uri>/index/videocatigories/</uri>
+                    <id>videocatigories</id>
+                    <pages>
+                        <videolist>
+                            <label>Videos</label>
+                            <uri>/index/videolist/</uri>
+                            <id>videolist</id>
+                            <resource>videocatigories</resource>
+                            <pages>
+                                <audio>
+                                    <label>Video</label>
+                                    <uri>/content/view/</uri>
+                                    <id>video</id>
+                                    <resource>videolist</resource>
+                                </audio>
+                            </pages>
+                        </videolist>
+                    </pages>
+                </videocatigories>
+                <audiocatigories>
+                    <label>Audio Categories</label>
+                    <uri>/index/audiocatigories/</uri>
+                    <id>audiocatigories</id>
+                    <pages>
+                        <audiolist>
+                            <label>Audios</label>
+                            <uri>/index/audiolist/</uri>
+                            <id>audiolist</id>
+                            <resource>audiocatigories</resource>
+                            <pages>
+                                <audio>
+                                    <label>Audio</label>
+                                    <uri>/content/view/</uri>
+                                    <id>audio</id>
+                                    <resource>audiolist</resource>
+                                </audio>
+                            </pages>
+                        </audiolist>
+                    </pages>
+                </audiocatigories>
+            </pages>
+        </home>
+    </nav>
+</configdata>

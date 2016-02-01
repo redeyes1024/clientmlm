@@ -1,0 +1,67 @@
+
+<div id="hometable">
+
+	<a class="homecell" href='<?=$this->baseUrl('index/directory/')?>' onclick="OpenLink(this); return false">
+		<img class="homeimg" src="<?=$this->baseUrl('images/home/derectory.png') ?>"/>
+	</a>
+
+	<a class="homecell" href='<?=$this->baseUrl('index/events/')?>' onclick="OpenLink(this); return false">
+		<img class="homeimg" src="<?=$this->baseUrl('images/home/events.png') ?>"/>
+	</a>
+
+	<a class="homecell" href='<?=$this->baseUrl('index/courses/')?>' onclick="OpenLink(this); return false">
+		<img class="homeimg" src="<?=$this->baseUrl('images/home/courses.png') ?>"/>
+	</a>
+
+	<a class="homecell" href='<?=$this->baseUrl('index/librarycatigories/')?>' onclick="OpenLink(this); return false">
+		<img class="homeimg" src="<?=$this->baseUrl('images/home/libray.png') ?>"/>
+	</a>
+
+	<a class="homecell" href='<?=$this->baseUrl('index/videocatigories/')?>' onclick="OpenLink(this); return false">
+		<img class="homeimg" src="<?=$this->baseUrl('images/home/video.png') ?>"/>
+	</a>
+
+	<a class="homecell" href='<?=$this->baseUrl('index/audiocatigories/')?>' onclick="OpenLink(this); return false">
+		<img class="homeimg" src="<?=$this->baseUrl('images/home/audio.png') ?>"/>
+	</a>
+
+</div>
+<?php if ($this->isMobile) : ?>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function () {
+
+
+		$(window).bind("resize", resizeWindow);
+		function resizeWindow(e) {
+
+			var deviceWidth = $('#page').width();
+			var deviceWidth2 = $(window).width();
+			var deviceheight = $('#page').height();
+			var deviceheight2 = $(window).height();
+
+			var reswidt = 0;
+			var imgwidth = 0;
+			var imgpageside = 0;
+			var imgpagetop = 0;
+
+			if (deviceWidth2 > deviceheight2) {
+				reswidt = deviceWidth2;
+				imgwidth = (reswidt / 100) * 20;
+				imgpageside = ((deviceWidth2 - 30) - (imgwidth * 3)) / 6;
+				imgpagetop = ((deviceheight2 - 80) - (imgwidth * 2)) / 4;
+			} else {
+				reswidt = deviceheight2;
+				imgwidth = (reswidt / 100) * 23;
+				imgpageside = ((deviceWidth2 - 30) - (imgwidth * 2)) / 4;
+				imgpagetop = ((deviceheight2 - 80) - (imgwidth * 3)) / 6;
+			}
+
+			$('.homeimg').css({'width':imgwidth, 'height':imgwidth});
+			$('.homecell').css({'margin-left':imgpageside, 'margin-right':imgpageside, 'margin-top':imgpagetop, 'margin-bottom':imgpagetop});
+		}
+
+		resizeWindow();
+	});
+</script>
+
+<?php endif; ?>

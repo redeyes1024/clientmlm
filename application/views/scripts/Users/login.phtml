@@ -1,0 +1,19 @@
+<div id="formdiv">
+	<div id="formpage">
+		<?php
+		if ($this->identity) {
+			echo "You are logined.";
+		} else {
+			if (isset($this->error)) {
+				echo "<h3>" . $this->error . "</h3>";
+			}
+			echo $this->form;
+		}
+		?>
+		<div id="addons">
+			New User ?
+			<input value="SignUp" type="button"
+			       onclick="window.location='<?=$this->baseUrl("/users/signup/")?>'"/>
+		</div>
+	</div>
+</div>

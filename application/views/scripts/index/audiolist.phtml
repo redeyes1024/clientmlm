@@ -1,0 +1,23 @@
+<?php
+if (count($this->list)) : ?>
+<script type="text/javascript">
+	function OpenLink2(value) {
+		_gaq_main.push(['_trackEvent', '<?=$this->identity->vUsername?>', 'Audio', value.innerHTML]);
+		_gaq_custom.push(['_trackEvent', '<?=$this->identity->vUsername?>', 'Audio', value.innerHTML]);
+		OpenLink(value);
+	}
+</script>
+<ul id="contenttable">
+	<?php foreach ($this->list as $row): ?>
+	<li class='lirow'>
+		<a onclick="OpenLink2(this); return false" href='<?=$this->baseUrl('/content/view/type/audio/id/' . $row['iAudioId']) ?>'><?=$row['vAudioName'] ?></a>
+	</li>
+	<?php endforeach; ?>
+
+</ul>
+<?php else: ?>
+<h3 class='emptymessage'>Now items to display.</h3>
+
+
+<?php
+endif;

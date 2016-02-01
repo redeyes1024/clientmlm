@@ -1,0 +1,110 @@
+html, body{
+	background-color: #F5F6F7;
+}
+html, body, div {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	color: #333;
+}
+
+#page{
+	width: 980px;
+	margin: 0 auto;
+}
+
+ #userinfo, .contentcontainer {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.contentcontainer, .diritem {
+	background: #FCFCFC no-repeat;
+	border: 1px solid;
+	border-color: #E5E5E5 #DBDBDB #D2D2D2;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+.copiright{
+	text-align: center;
+}
+
+#userinfo div {
+	display: inline-block;
+}
+
+#usercontainer {
+	text-align: right;
+	float: right;
+}
+
+#content {
+	margin: 20px;
+}
+
+#content h1 {
+	text-align: left;
+	margin-left: 50px;
+}
+
+#contentheader {
+	text-align: left;
+	margin-bottom: 10px;
+	/*padding-bottom: 10px;*/
+	border-bottom: 1px solid lightGrey;
+}
+
+
+#hometable {
+	margin: 20px;
+}
+
+.homecell {
+	display: inline-block;
+	padding: 50px;
+	float: none;
+text-decoration:none;
+	border: none;
+
+}
+.homecell:link {color:white;}      /* unvisited link */
+.homecell:visited {color:white;}  /* visited link */
+.homecell:hover {color:white;}  /* mouse over link */
+.homecell:active {color:white;}  /* sel*/
+.homeimg{
+	border: none;
+}
+
+
+#formpage {
+	display: inline-block;
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#formdiv {
+	text-align: center;
+}
+
+#addons {
+	padding-top: 20px;
+}
+
+.topbump1 {
+	padding-top: 15px;
+}
+
+.topbump {
+	padding-top: 5px;
+}
+
+.emptymessage {
+	padding-top: 20px;
+}
+
+
+

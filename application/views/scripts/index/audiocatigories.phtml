@@ -1,0 +1,16 @@
+<?php
+if (count($this->list)) : ?>
+<ul id="contenttable">
+	<?php foreach ($this->list as $row): ?>
+	<li class='lirow'>
+		<a onclick="OpenLink(this); return false" href='<?=$this->baseUrl('/index/audiolist/iAudioCategoryId/' . $row->iAudioCategoryId) ?>'><?=$row->vCategoryName ?></a>
+	</li>
+	<?php endforeach; ?>
+
+</ul>
+
+
+<?php else: ?>
+<h3 class='emptymessage'>Now items to display.</h3>
+
+<?php endif; ?>

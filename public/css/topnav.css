@@ -1,0 +1,77 @@
+.topnavheaser, .topnav, .linav, .topnava {
+	height: 36px;
+}
+
+.topnavheaser{
+	margin: 10px  0;
+}
+.topnavheaser, .topnav, .topnava {
+	display: block;
+	width: 100%;
+}
+
+.linav {
+	display: inline-block;
+	float: left;
+}
+
+.topnavheaser {
+
+	margin: 10px auto;
+	text-align: left;
+	/*z-index: 9998;*/
+}
+
+.licenter {
+	background: url('../images/topnav.png') -74px repeat-x;
+	width: 139px;
+}
+
+#linavleft {
+	background: url('../images/topnav.png') 0 0 no-repeat;
+	width: 3px;
+}
+
+#linavright {
+	background: url('../images/topnav.png') 0 -36px no-repeat;
+	width: 3px;
+}
+
+.licenter a:hover {
+	background: url('../images/topnav.png') 0 -144px repeat-x;
+}
+
+.licenter a.active {
+	background: url('../images/topnav.png') 0 -108px repeat-x;
+}
+
+.topnava {
+	/*float: left;*/
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.topnava span {
+	display: block;
+	width: 100%;
+	text-shadow: 0 1px black;
+	margin: 9px auto;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+.homecell {
+	text-decoration: none;
+}
+
+#breadcrumb {
+	text-shadow: 0 1px lightgray;
+}

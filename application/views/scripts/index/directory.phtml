@@ -1,0 +1,20 @@
+<?php
+if (count($this->list)) :?>
+<div id="dirtable">
+	<?php foreach ($this->list as $row): ?>
+	<div class='dircell'>
+		<div class='diritem'>
+			<b><?= $row->vFirstname . " " . $row->vLastname?></b><br/>
+			<?=$row->vJobTitle?><br/>
+			<a href="mailto:<?=$row->vEmail?>"><?=$row->vEmail?></a>
+			<br/>
+			<?=$row->vPhone?>
+		</div>
+	</div>
+	<?php endforeach;?>
+</div>
+<?php else: ?>
+<h3 class='emptymessage'>Now items to display.</h3>
+
+<?php
+endif;

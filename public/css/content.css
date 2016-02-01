@@ -1,0 +1,34 @@
+#contenttable {
+	/*width: 96%;*/
+	display: block;
+}
+
+.lirow {
+	width: 100%;
+	display: block;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted lightGrey;
+}
+
+.tag:before {
+	content: ">";
+}
+
+#dirtable {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.dircell {
+	display: inline-block;
+	margin: 6px;
+	min-width: 215px;
+}
+
+.diritem {
+	display: block;
+	margin: 5px;
+}

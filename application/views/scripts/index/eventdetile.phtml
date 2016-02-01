@@ -1,0 +1,13 @@
+<?php if ($this->detiles->iEventId): ?>
+<script type="text/javascript">
+	_gaq_main.push(['_trackEvent', '<?=$this->identity->vUsername?>', 'Event', '<?=$this->detiles->vEventTitle ?>']);
+	_gaq_custom.push(['_trackEvent', '<?=$this->identity->vUsername?>', 'Event', '<?=$this->detiles->vEventTitle ?>']);
+</script>
+<h2 class="topbump1">Event : <?=$this->detiles->vEventTitle ?></h2>
+<p class="topbump"><?= $this->detiles->dEventDateTime ?></p>
+<h3 class="topbump">Description :</h3>
+<p class="topbump">
+	<?= $this->detiles->vDescription?>
+</p>
+<?php
+endif;

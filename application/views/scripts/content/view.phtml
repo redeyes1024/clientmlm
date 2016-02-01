@@ -1,0 +1,27 @@
+<?php
+if (count($this->file)) :
+	?>
+<center>
+	<div class="topbump1">
+		<div id='mediaplayer'></div>
+	</div>
+
+	<script type="text/javascript">
+		jwplayer('mediaplayer').setup({
+			'id':'playerID',
+			'width':'100%',
+			'autostart': 'true',
+			'height':'400px',
+			'file':'<?=$this->baseUrl($this->file) ?>',
+			'image':'<?=$this->baseUrl("/images/preview.jpg") ?>',
+			'modes':[
+				{type:'html5'},
+				{type:'flash', src:'<?=$this->baseUrl("/images/player.swf") ?>'},
+				{type:'download'}
+			]
+		});
+	</script>
+</center>
+<?php else: ?>
+<h3 class="emptymessage">Now items to display.</h3>
+<?php endif; ?>

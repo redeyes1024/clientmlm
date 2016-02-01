@@ -1,0 +1,127 @@
+html, body {
+	background-color: #F5F6F7;
+}
+
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	display: block;
+}
+
+body {
+	font: 18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body, #page {
+	margin: 0 auto;
+	width: 100%;
+	text-align: left;
+	padding-bottom: 20px;
+}
+/*#userinfo div {*/
+	/*display: inline-block;*/
+/*}*/
+
+.logoutlink {
+	display: block;
+	width: auto;
+	float: none;
+}
+
+#usercontainer {
+	text-align: right;
+	/*float: right;*/
+}
+.logoutl {
+	font-size: 0.5em;
+}
+.contentcontainer,  .dircell  {
+	background: #FCFCFC no-repeat;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border: 1px solid;
+	border-color: #E5E5E5 #DBDBDB #D2D2D2;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+	padding: 0px;
+}
+
+#content {
+	margin: 8px;
+}
+
+#hometable, #userinfo,#contentheader {
+
+	display: block;
+}
+
+#hometable {
+	margin: 0px;
+}
+
+.homecell {
+	display: inline-block;
+	margin: 2em;
+	float: none;
+}
+
+#hometable img {
+	width: 50px;
+	height: 50px;
+}
+
+#content h1 {
+	text-align: left;
+}
+
+#formpage {
+	display: inline-block;
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#formdiv {
+	text-align: center;
+}
+
+#addons {
+	padding-top: 20px;
+}
+
+.topbump1 {
+	padding-top: 15px;
+}
+
+.topbump {
+	padding-top: 5px;
+}
+
+.emptymessage {
+	padding-top: 20px;
+}
+#contentheader {
+	text-align: left;
+	vertical-align: middle;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lightGrey;
+}
+
+#content h1 {
+	height: 30px;
+	margin-left: 50px;
+}
+a.homecell:link {color:white;}      /* unvisited link */
+a.homecell:visited {color:white;}  /* visited link */
+a.homecell:hover {color:white;}  /* mouse over link */
+a.homecell:active {color:white;}  /* sel

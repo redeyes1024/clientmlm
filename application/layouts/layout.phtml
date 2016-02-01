@@ -1,0 +1,120 @@
+<?php echo $this->doctype('XHTML1_STRICT') ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <?= $this->headMeta() ?>
+    <?= $this->headTitle() ?>
+    <?= $this->headLink() ?>
+    <?= $this->headScript() ?>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+    function OpenLink(theLink) {
+        window.location.href = theLink.href;
+    }
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36634804-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<div id="page">
+    <?php if (!$this->isMobile) : ?>
+        <nav class="topnavheaser">
+            <ui class="topnav">
+                <li class="linav" id="linavleft">
+                </li>
+                <li class="linav licenter <?= ($this->pageCurrent == '/index/') ? 'active' : '' ?>">
+                    <a id="menu-home" class="topnava <?= ($this->pageCurrent == '/index/') ? 'active' : '' ?>"
+                       href="<?= $this->baseUrl('/index/') ?>">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <?php
+                $pages = $this->navigation()->toArray();
+                $pages = $pages[0]["pages"];
+                foreach ($pages as $page) :
+                    if ($page['class'] == 'active' ||
+                        $this->resource == $page['id']
+                    ) :
+                        ?>
+                        <li class="linav licenter active">
+                            <a id="menu-<?= $page['id'] ?>" class="topnava active <?= $page['class'] ?>"
+                               href="<?= $page['uri'] ?>">
+                                <span><?= $page['label'] ?></span>
+                            </a>
+                        </li>
+                    <?php else : ?>
+                        <li class="linav licenter">
+                            <a id="menu-<?= $page['id'] ?>" class="topnava <?= $page['class'] ?>"
+                               href="<?= $page['uri'] ?>">
+                                <span><?= $page['label'] ?></span>
+                            </a>
+                        </li>
+
+                    <?php endif; endforeach; ?>
+                <li class="linav" id="linavright">
+                </li>
+            </ui>
+        </nav>
+    <?php endif; ?>
+
+
+    <div id="userinfo">
+        <div id="usercontainer">
+
+            <?php if ($this->identity) : ?>
+                <a class="logoutl" href='<?= $this->url(array('controller' => 'Users', 'action' => 'logout')) ?>'>Log
+                    Out
+                    [ <?= $this->identity->vUsername ?> ]
+                </a>
+            <?php endif; ?>
+        </div>
+        <?php if (!$this->isMobile) : ?>
+            <div id="breadcrumb">
+                <?= $this->navigation()->breadcrumbs()->setMinDepth(0)->setLinkLast(false)->setSeparator(" >> ") ?>
+            </div>
+        <?php endif; ?>
+
+    </div>
+
+    <div class="contentcontainer">
+        <div id="content">
+            <div id="contentheader">
+                <?php if ($this->isMobile && $this->pageCurrent != '/index/') : ?>
+                    <a onclick="OpenLink(this); return false" href="<?= $this->pageParent ?>">
+                        <img style='float: left;'
+                             src="<?= $this->baseUrl("/images/btn_back.png") ?>">
+                    </a>
+                <?php endif; ?>
+                <h3>&nbsp;&nbsp;<?= $this->title ?></h3>
+            </div>
+            <?= $this->layout()->content ?>
+        </div>
+    </div>
+
+
+    <!--	<br/>-->
+
+    <div class="copiright">
+        Created by
+        <a href="http://www.hospitalu.com" target="_blank">Hospital U</a>
+
+    </div>
+</div>
+
+</body>
+</html>
